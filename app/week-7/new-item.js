@@ -25,7 +25,7 @@ export default function NewItem({ onAddItem }) {
     e.preventDefault();
 
     // Generate random id
-    const id = Math.random().toString(36).substring(2, 9);
+    const id = `${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
 
     const item = {
       id: id,
